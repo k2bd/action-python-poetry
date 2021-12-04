@@ -1,0 +1,12 @@
+name: Test action
+on:
+  workflow_dispatch:
+
+jobs:
+  action-python-poetry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./  # Test against the repo's copy of the action
+        with:
+          helloName: k2bd
+          repeats: 3

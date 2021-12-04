@@ -1,0 +1,20 @@
+name: "action-python-poetry"
+author: your-name
+description: >
+  A template action that says hello to you, potentially multiple times.
+runs:
+  using: docker
+  image: Dockerfile
+inputs:
+  helloName:
+    description: >
+      AoC user ID. See the README for instructions on getting this.
+    required: true
+  repeats:
+    description: >
+      Number of times to say hello
+    required: false
+    default: 1
+branding:
+  icon: "gift"
+  color: "purple"

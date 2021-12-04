@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "action-python-poetry"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^3.0.0"
+black = "^21.11b1"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+mypy = "^0.910"
+poethepoet = "^0.11.0"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.poe.tasks]
+autoformat.sequence = [
+    {cmd = "black src tests"},
+    {cmd = "isort src tests"},
+]
+
+lint.sequence = [
+    {cmd = "black --check -v src tests"},
+    {cmd = "isort --check -v src tests"},
+    {cmd = "flake8 src tests"},
+    {cmd = "mypy --pretty src tests"},
+]
+
+[tool.poe.tasks.test]
+cmd = "pytest -vv --cov=action_python_poetry --cov-report term --cov-report xml"
+
+[tool.poe.tasks.test.env]
+INPUT_HELLONAME = "k2bd"
+INPUT_REPEATS = "3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

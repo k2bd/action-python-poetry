@@ -4,7 +4,7 @@
 1. Rename the `src/action_python_poetry` package.
 1. Globally replace instances of `action-python-poetry` and `action_python_poetry` with your project and package name.
 1. If your repo is private, set it up on [CodeCov](https://app.codecov.io/) and add a codecov token to your repo under the `CODECOV_TOKEN` secret.
-1. Create and test your action. `__main__.py` in your package will be executed when the action is run. The environment variables your tests use can be [set in `pyproject.toml`](https://github.com/k2bd/action-python-poetry/blob/694756b8ff6656f8e1a9a4a141f293100f55229d/pyproject.toml#L39-L41) and/or managed in code.
+1. Create and test your action. `__main__.py` in your package will be executed when the action is run. The environment variables your tests use can be [set in `pyproject.toml`](https://github.com/k2bd/action-python-poetry/blob/694756b8ff6656f8e1a9a4a141f293100f55229d/pyproject.toml#L39-L41) and/or managed in test fixtures.
 1. Update `action.yml`, `README.md`, and `.github/workflows/test-action.yml` to reflect your action's specification.
 1. Update `LICENSE.md` as appropriate, making sure to retain the original copyright and permissions notices in your distribution according to the MIT license that this template is distributed under.
 1. Remove this section from `README.md`.

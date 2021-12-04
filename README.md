@@ -6,7 +6,7 @@
 1. If your repo is private, set it up on [CodeCov](https://app.codecov.io/) and add a codecov token to your repo under the `CODECOV_TOKEN` secret.
 1. Create and test your action. `__main__.py` in your package will be executed when the action is run.
 1. Update `action.yml`, `README.md`, and `.github/workflows/test-action.yml` to reflect your action's specification.
-1. Update the copyright notice and permissions stuff in `LICENSE`, making sure to retain the original text of both in your distribution according to the MIT license that this template is distributed under.
+1. Update the `LICENSE.md` as appropriate, making sure to retain the original copyright and permissions notices in your distribution according to the MIT license that this template is distributed under.
 1. Remove this section from `README.md`.
 1. Happy hacking!
 

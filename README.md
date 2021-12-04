@@ -21,7 +21,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  do-thing:
+  action-python-poetry:
     runs-on: ubuntu-latest
     steps:
       - uses: k2bd/action-python-poetry@v1
@@ -58,7 +58,11 @@ Note: if Poetry is managing a virtual environment for you, you may need to use `
 
 ### Testing the action
 
-The action can be tested locally by building the Dockerfile, e.g. `docker run -e INPUT_HELLONAME=k2bd -e INPUT_REPEATS=2 $(docker build -q .)`
+The action can be tested locally by building the Dockerfile, e.g.
+
+```sh
+docker run -e INPUT_HELLONAME=k2bd -e INPUT_REPEATS=2 $(docker build -q .)
+```
 
 Additionally, there is a manual invocation action on the repo called "Test Action" that can be used to invoke the repo's version of the action from the Actions tab of the repo.
 

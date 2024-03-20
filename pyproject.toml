@@ -10,7 +10,7 @@ python = "^3.8"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 pytest-cov = "^3.0.0"
-black = "^21.11b1"
+black = "^24.3"
 isort = "^5.10.1"
 flake8 = "^4.0.1"
 mypy = "^0.910"
